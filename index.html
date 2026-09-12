@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ABTI：测测你的 AI 人格。" />
+    <title>ABTI｜测测你的 AI 人格</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="intro-screen" class="screen intro-screen active" aria-labelledby="intro-title">
+        <p class="eyebrow">ABTI · AI BESTIE TYPE INDICATOR</p>
+        <h1 id="intro-title">测测你的<br /><em>AI 人格</em></h1>
+        <p class="intro-copy">如果你的性格长成一个 AI，<br />你会是哪一种？</p>
+        <div class="type-grid" aria-label="ABTI 四个维度">
+          <div><b>C</b><span>Context<br />先看全貌</span></div><div><b>A</b><span>Action<br />先动起来</span></div><div><b>S</b><span>Structure<br />结构秩序</span></div><div><b>W</b><span>Wild<br />自由脑洞</span></div>
+          <div><b>R</b><span>Reality<br />事实优先</span></div><div><b>F</b><span>Feeling<br />感受优先</span></div><div><b>I</b><span>Iterate<br />反复打磨</span></div><div><b>T</b><span>Takeoff<br />快速发射</span></div>
+        </div>
+        <button id="start-btn" class="primary-button">开始测试 <span>→</span></button>
+        <p class="tiny-note">12 题 · 凭直觉选 · 仅供娱乐</p>
+      </section>
+      <section id="quiz-screen" class="screen quiz-screen" aria-live="polite">
+        <header class="quiz-topbar"><button id="back-btn" class="text-button" type="button">← 返回</button><span id="progress-label">01 / 12</span></header>
+        <div class="progress-track"><i id="progress-bar"></i></div>
+        <p id="question-axis" class="axis-label"></p><h2 id="question-title"></h2><div id="options" class="option-list"></div>
+      </section>
+      <section id="result-screen" class="screen result-screen" aria-live="polite">
+        <div class="result-hero"><p class="result-kicker">你的 AI 人格是：</p><h2 id="result-name"></h2><p id="result-code" class="result-code"></p><p id="result-mbti" class="result-mbti"></p><img id="result-image" class="result-image" alt="" /><blockquote id="result-quote"></blockquote></div>
+        <div class="result-details">
+          <section class="detail-block description-block"><p class="block-label">人格说明</p><p id="result-description"></p></section>
+          <section class="detail-block"><p class="block-label">高光能力</p><p id="result-strength"></p></section>
+          <section class="detail-block bug-block"><p class="block-label">隐藏 Bug</p><p id="result-bug"></p></section>
+          <section class="detail-block advice-block"><p class="block-label">今日建议</p><p id="result-advice"></p></section>
+          <section class="partner-card"><p class="block-label">召唤搭子</p><h3 id="partner-name"></h3><p id="partner-reason"></p></section>
+        </div>
+        <div class="result-actions"><button id="share-btn" class="primary-button">分享我的人格</button><button id="restart-btn" class="secondary-button">再测一次</button></div>
+      </section>
+    </main><script src="app.js"></script>
+  </body>
+</html>
